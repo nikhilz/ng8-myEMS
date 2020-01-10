@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './features/login/login.component';
-import { LoginModule } from './features/login/login.module';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppCommonModule } from './app.common.module';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -19,7 +19,9 @@ import { AppCommonModule } from './app.common.module';
     BrowserAnimationsModule,
     AppCommonModule
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
