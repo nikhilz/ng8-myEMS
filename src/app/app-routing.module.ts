@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LayoutComponent } from './shared/layout/layout.component';
 
 
 const routes: Routes = [
@@ -12,10 +13,19 @@ const routes: Routes = [
     loadChildren: () => import('src/app/features/register-user/register-user.module').then(m=>m.RegisterUserModule)
   },
   {
-      path: '',
-      redirectTo: 'login',
-      pathMatch: 'full'
-  }
+    path: 'main',
+    component: LayoutComponent,
+    children : [{
+      path: 'dashboard', 
+      loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule)
+    }]
+  },
+  
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+},
 ];
 
 @NgModule({
