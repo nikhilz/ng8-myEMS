@@ -11,6 +11,9 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { MenuComponent } from './shared/layout/menu/menu.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { ErrorComponent } from './shared/error/error.component';
+import { UserIdleModule } from 'angular-user-idle';
 
 
 @NgModule({
@@ -19,16 +22,19 @@ import { MenuComponent } from './shared/layout/menu/menu.component';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppCommonModule
+    AppCommonModule,
+    UserIdleModule.forRoot({ idle: 50, timeout: 1, ping: null })
   ],
   providers: [
-    MessageService
+    MessageService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
