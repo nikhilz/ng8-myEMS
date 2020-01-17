@@ -30,7 +30,7 @@ import { UserIdleModule } from 'angular-user-idle';
     AppRoutingModule,
     BrowserAnimationsModule,
     AppCommonModule,
-    UserIdleModule.forRoot({ idle: 50, timeout: 1, ping: null })
+    UserIdleModule.forRoot({ idle: 300, timeout: 1, ping: null })
   ],
   providers: [
     MessageService,

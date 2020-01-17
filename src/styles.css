@@ -159,11 +159,11 @@ html, body {
 .login-panel, .user-regisration {
     height: 100%;
     background-image: radial-gradient(var(--header-footer-bg-color) 40%, var(--header-footer-bg-color2));
-    background-image: url("assets\images\background.jfif");
+   /* background-image: url("assets\images\background.jfif");
     background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position: relative;*/
 }
 
 .badge {
