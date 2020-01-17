@@ -7,29 +7,35 @@ import { ErrorComponent } from './shared/error/error.component';
 
 const routes: Routes = [
   {
-    path:'login',
-    loadChildren: () => import('src/app/features/login/login.module').then(m=>m.LoginModule)
+    path: 'login',
+    loadChildren: () => import('src/app/features/login/login.module').then(m => m.LoginModule)
   },
   {
-    path:'register',
-    loadChildren: () => import('src/app/features/register-user/register-user.module').then(m=>m.RegisterUserModule)
+    path: 'register',
+    loadChildren: () => import('src/app/features/register-user/register-user.module').then(m => m.RegisterUserModule)
   },
   {
     path: 'main',
     component: LayoutComponent,
-    children : [{
-      path: 'dashboard', 
+    children: [{
+      path: 'dashboard',
       loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule),
-      canActivate:[AuthGuard]
+      canActivate: [AuthGuard]
+    }, {
+      path: 'aboutus',
+      loadChildren: () => import('./features/aboutus/aboutus.module').then(m => m.AboutusModule),
+      canActivate: [AuthGuard]
     }]
   },
-  
+
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-},
-{ path: '**', component: ErrorComponent }
+  },
+
+  { path: '**', component: ErrorComponent }
+
 ];
 
 @NgModule({

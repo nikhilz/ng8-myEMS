@@ -46,8 +46,6 @@ export class HeaderComponent implements OnInit {
     //Start watching for user inactivity.
     this.userIdle.startWatching();
 
-    this.userIdle.onIdleStatusChanged().subscribe(count=>{console.log(count)}
-      );
     // Start watching when user idle is starting.
     this.userIdle.onTimerStart().subscribe(count=>{console.log(count)});
 
@@ -58,7 +56,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    //this.userIdle.stopWatching();
+    this.userIdle.stopWatching();
     this.routeStateService.removeAll();
     this.userContextService.logout();
     this.sessionService.removeItem('active-menu');

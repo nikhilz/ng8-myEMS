@@ -12,6 +12,9 @@ export class MenuDataService {
   getMenuList() : CustomMenuItem[]{
     return [{
       Label: 'Home', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+    },
+    {
+        Label: 'AboutUs', Icon: 'fa-info-circle', RouterLink: '/main/aboutus', Childs: null, IsChildVisible: false
     }];
     
   }
