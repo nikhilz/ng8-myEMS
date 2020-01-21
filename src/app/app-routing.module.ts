@@ -25,6 +25,15 @@ const routes: Routes = [
       path: 'aboutus',
       loadChildren: () => import('./features/aboutus/aboutus.module').then(m => m.AboutusModule),
       canActivate: [AuthGuard]
+    },
+    {
+      path: 'contactus',
+      loadChildren: () => import('./features/contactus/contactus.module').then(m => m.ContactusModule),
+      canActivate: [AuthGuard]
+    },
+    {
+      path: 'employees', loadChildren: () => import('./features/employees/employees.module').then(m => m.EmployeesModule),
+      canActivate: [AuthGuard]
     }]
   },
 

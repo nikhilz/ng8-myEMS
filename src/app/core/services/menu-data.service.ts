@@ -14,8 +14,14 @@ export class MenuDataService {
       Label: 'Home', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
     },
     {
-        Label: 'AboutUs', Icon: 'fa-info-circle', RouterLink: '/main/aboutus', Childs: null, IsChildVisible: false
-    }];
+        Label: 'Employees', Icon: 'fa-users', RouterLink: '/main/employees', Childs: null, IsChildVisible: false
+    },
+    {
+        Label: 'About Us', Icon: 'fa-info-circle', RouterLink: '/main/aboutus', Childs: null, IsChildVisible: false
+    },
+    {
+      Label: 'Contact Us', Icon: 'fa-envelope', RouterLink: '/main/contactus', Childs: null, IsChildVisible: false
+  }];
     
   }
 

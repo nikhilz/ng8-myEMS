@@ -16,6 +16,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MessagesModule } from 'primeng/messages';
+import { GMapModule } from 'primeng/gmap';
 
 @NgModule({
     exports: [
@@ -35,7 +36,8 @@ import { MessagesModule } from 'primeng/messages';
         SidebarModule,
         DynamicDialogModule,
         InputTextareaModule,
-        MessagesModule
+        MessagesModule,
+        GMapModule
     ]
 })
 export class NgPrimeModule { }
