@@ -34,7 +34,12 @@ const routes: Routes = [
     {
       path: 'employees', loadChildren: () => import('./features/employees/employees.module').then(m => m.EmployeesModule),
       canActivate: [AuthGuard]
-    }]
+    },
+    { 
+      path: 'departments', loadChildren: () => import('./features/department/department.module').then(m => m.DepartmentModule),
+      canActivate: [AuthGuard]
+    }
+  ]
   },
 
   {
@@ -44,7 +49,6 @@ const routes: Routes = [
   },
 
   { path: '**', component: ErrorComponent }
-
 ];
 
 @NgModule({

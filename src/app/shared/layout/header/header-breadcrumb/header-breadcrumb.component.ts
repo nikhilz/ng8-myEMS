@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { RouteStateService } from 'src/app/core/services/route-state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-breadcrumb',
@@ -14,7 +15,8 @@ export class HeaderBreadcrumbComponent implements OnInit {
   home: MenuItem;
 
 
-  constructor(private routeStateService: RouteStateService) {
+  constructor(private routeStateService: RouteStateService,
+    private router: Router) {
     this.items = [];
   }
 
@@ -24,10 +26,14 @@ export class HeaderBreadcrumbComponent implements OnInit {
       this.items.push({ label: route.title, command: () => { this.onClickBreadcrumb(route.id); } });
     });
 
-    this.home = { icon: 'pi pi-home' };
+    this.home = { icon: 'pi pi-home' ,command: () => { this.redirectToHome()} };
   }
 
   onClickBreadcrumb(id: number) {
     this.routeStateService.loadById(id);
+  }
+
+  redirectToHome(){
+    this.router.navigate(["main/dashboard"]);
   }
 }
