@@ -7,7 +7,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
 
-# Angular 8 + PrimeNg
+# Angular 8 + PrimeNg + PWA
 (Please check branch Ng7 for angular 7 version)
 ````
 https://angular.io/
