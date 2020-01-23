@@ -1,6 +1,23 @@
+
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/logo-small.jpg" width="100" height="100">
+
+
 # Ng8MyEMS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+
+
+# Angular 8 + PrimeNg
+(Please check branch Ng7 for angular 7 version)
+````
+https://angular.io/
+https://www.primefaces.org/primeng/
+http://www.ngx-translate.com/
+https://fontawesome.com/
+https://www.npmjs.com/package/angular-user-idle
+https://www.chartjs.org/
+````
+
 
 ## Development server
 
@@ -33,7 +50,6 @@ Before run install these libs:
 9.  User inactivity tracing, auto logout on 5 minute inactivity
 10. Show/Hide menu bar on click for both desktop and mobile layout
 11. Theme chooser for dark and light theme at runtime.
-12. Multi language support (English and Hindi)
 ````
 
 ## Browser support
@@ -42,15 +58,17 @@ Chrome, Firefox, Edge, IE 11/10 (except theme chooser as css variables not suppo
 ````
 
 ### Login page
-
-![image login](https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/login-desktop.png)
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/login-desktop.png" width="500" height="300">
 
 ### Details page
-
-![image Employees](https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/Employees_ss.png)
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/Employees_ss.png" width="500" height="300">
 
 ### Responsive layout for mobile
 
-![image login](https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/login_responsive.jpg)
-![image dashboard](https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/dashboard_responsive.jpg)
-![image contact us](https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/contactUs_responsive.jpg)
+
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/login_responsive.jpg" width="200" height="400"><img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/dashboard_responsive.jpg" width="200" height="400">
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/contactUs_responsive.jpg" width="200" height="400">
+
+[ref](https://github.com/NilavPatel/Ng-Prime/)
+
+
