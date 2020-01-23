@@ -14,6 +14,8 @@ import { MenuComponent } from './shared/layout/menu/menu.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { ErrorComponent } from './shared/error/error.component';
 import { UserIdleModule } from 'angular-user-idle';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { UserIdleModule } from 'angular-user-idle';
     AppRoutingModule,
     BrowserAnimationsModule,
     AppCommonModule,
-    UserIdleModule.forRoot({ idle: 300, timeout: 1, ping: null })
+    UserIdleModule.forRoot({ idle: 300, timeout: 1, ping: null }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     MessageService,

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentComponent implements OnInit {
 
-  constructor() { }
+  msgs: any[];
+  constructor() {
+    this.msgs = [];
+  }
 
   ngOnInit() {
+    
   }
+
+  
 
 }

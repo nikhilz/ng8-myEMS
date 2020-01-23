@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Employee } from 'src/app/core/models/employee.model';
 import { RouteStateService } from 'src/app/core/services/route-state.service';
 import { EmployeeDataService } from 'src/app/core/services/employee-data.service';
+import { ToastService } from 'src/app/core/services/toast.service';
 
 @Component({
   selector: 'app-employees',
@@ -17,7 +18,8 @@ export class EmployeesComponent implements OnInit {
 
   constructor(
     private routeStateService: RouteStateService,
-    private employeeService: EmployeeDataService) { }
+    private employeeService: EmployeeDataService,
+    private toastService: ToastService) { }
 
   ngOnInit() {
 
@@ -31,9 +33,19 @@ export class EmployeesComponent implements OnInit {
     ];
 
     this.employees = this.employeeService.getEmployeeList();
+
+    let status: boolean = this.onNetworkStatusChange();
+    if (status) {
+      console.log('status ' + status);
+      this.toastService.addSingle("warn", "You are Offline", "");
+    }
   }
 
   goToDepartmentDetails(department: number) {
     this.routeStateService.add("Department details", "/main/departments/department-detail", department, false);
+  }
+  onNetworkStatusChange() {
+    let offline: boolean = !navigator.onLine;
+    return offline;
   }
 }

@@ -60,6 +60,20 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+   /* window.addEventListener('online',  this.onNetworkStatusChange.bind(this));
+window.addEventListener('offline', this.onNetworkStatusChange.bind(this));*/
+let status : boolean = this.onNetworkStatusChange();
+if(status){
+  this.msgs.push({ severity: 'warn', summary: '', detail: 'You are Offline' });
+}/*else{
+  this.msgs.pop();
+  this.msgs.push({ severity: 'error', summary: '', detail: 'You are Online' });
+}*/
+  }
+  onNetworkStatusChange() {
+    let offline:boolean = !navigator.onLine;
+    console.log('offline ' + offline);
+    return offline;
   }
 
 }
