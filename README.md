@@ -36,6 +36,14 @@ Before run install these libs:
 
 `npm install primeflex --save`
 
+## Execute as a PWA using CLI
+`ng add @angular/pwa`
+
+`npm install -g http-server`
+
+`ng build --prod`
+
+`http-server -c-1 dist\ng8-myEMS`
 
 ## features
 ````
@@ -66,7 +74,8 @@ Chrome, Firefox, Edge, IE 11/10 (except theme chooser as css variables not suppo
 ### Responsive layout for mobile
 
 
-<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/login_responsive.jpg" width="200" height="400"><img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/dashboard_responsive.jpg" width="200" height="400">
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/login_responsive.jpg" width="200" height="400">
+<img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/dashboard_responsive.jpg" width="200" height="400">
 <img src="https://raw.githubusercontent.com/nikhilz/ng8-myEMS/master/src/assets/images/contactUs_responsive.jpg" width="200" height="400">
 
 [ref](https://github.com/NilavPatel/Ng-Prime/)
